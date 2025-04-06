@@ -6,17 +6,15 @@
     <title>HTML Lists and Tables Example</title>
 </head>
 <body>
-    <header>
+    
         <h1>HTML Lists and Tables Demonstration</h1>
         <p>This page shows examples of different types of lists and tables in HTML.</p>
-    </header>
 
-    <section>
         <h2>Types of Lists</h2>
         
-        <article>
+        
             <h3>Unordered List (Bullet Points)</h3>
-            <ul>
+            <ul style="list-style-type:square;">
                 <li>First item</li>
                 <li>Second item</li>
                 <li>Third item
@@ -27,24 +25,20 @@
                 </li>
                 <li>Fourth item</li>
             </ul>
-        </article>
 
-        <article>
             <h3>Ordered List (Numbered)</h3>
             <ol>
                 <li>Step one</li>
                 <li>Step two</li>
                 <li>Step three
-                    <ol type="a">
-                        <li>Sub-step a</li>
+                    <ol type="a" start="2">
                         <li>Sub-step b</li>
+                        <li>Sub-step c</li>
                     </ol>
                 </li>
                 <li>Step four</li>
             </ol>
-        </article>
-
-        <article>
+            
             <h3>Definition List</h3>
             <dl>
                 <dt>HTML</dt>
@@ -56,41 +50,10 @@
                 <dt>JavaScript</dt>
                 <dd>A programming language that makes web pages interactive</dd>
             </dl>
-        </article>
-    </section>
-
-    <section>
-        <h2>Table Examples</h2>
-        
-        <article>
-            <h3>Basic Table</h3>
-            <table border="1">
-                <tr>
-                    <th>Name</th>
-                    <th>Age</th>
-                    <th>Occupation</th>
-                </tr>
-                <tr>
-                    <td>John Doe</td>
-                    <td>32</td>
-                    <td>Web Developer</td>
-                </tr>
-                <tr>
-                    <td>Jane Smith</td>
-                    <td>28</td>
-                    <td>Graphic Designer</td>
-                </tr>
-                <tr>
-                    <td>Mike Johnson</td>
-                    <td>41</td>
-                    <td>Project Manager</td>
-                </tr>
-            </table>
-        </article>
-
-        <article>
-            <h3>Table with Colspan and Rowspan</h3>
-            <table border="1">
+                
+            <h3>Table with Colspan, Rowspan and Caption</Caption></h3>
+            <table bgcolor="lightyellow" border="0">
+                <caption>Sales Table</caption>
                 <tr>
                     <th rowspan="2">Category</th>
                     <th colspan="2">Sales</th>
@@ -115,43 +78,8 @@
                     <td>$24,500</td>
                 </tr>
             </table>
-        </article>
-
-        <article>
-            <h3>Table with Caption</h3>
-            <table border="1">
-                <caption>Monthly Expenses</caption>
-                <tr>
-                    <th>Month</th>
-                    <th>Rent</th>
-                    <th>Utilities</th>
-                    <th>Groceries</th>
-                </tr>
-                <tr>
-                    <td>January</td>
-                    <td>$1,200</td>
-                    <td>$150</td>
-                    <td>$300</td>
-                </tr>
-                <tr>
-                    <td>February</td>
-                    <td>$1,200</td>
-                    <td>$180</td>
-                    <td>$280</td>
-                </tr>
-                <tr>
-                    <td>March</td>
-                    <td>$1,200</td>
-                    <td>$160</td>
-                    <td>$320</td>
-                </tr>
-            </table>
-        </article>
-    </section>
-
     <footer>
-        <p>Created as an HTML example without CSS</p>
-        <p>© 2023 Basic HTML Page</p>
+        <p>Created as an HTML example without CSS © 2025 Basic HTML Page</p>
     </footer>
 </body>
 </html>
