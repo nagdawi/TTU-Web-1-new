@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Form Examples</title>
+</head>
+<body>
+    <h1>Form Examples</h1>
+    
+    <!-- Form 1: Basic Information -->
+    <form id="personalInfo" name="personalInfo" action="/action_page.php" method="post" autocomplete="on" novalidate>
+        <h2>Personal Information</h2>
+        <fieldset>
+            <legend>Basic Details</legend>
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name" maxlength="50"><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="your@email.com"><br><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required minlength="8"><br><br>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"><br><br>
+            
+            <label for="birthdate">Birth Date:</label>
+            <input type="date" id="birthdate" name="birthdate"><br><br>
+            
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="18" max="120" step="1"><br><br>
+            
+            <label for="website">Website:</label>
+            <input type="url" id="website" name="website" placeholder="https://example.com"><br><br>
+            
+            <label for="color">Favorite Color:</label>
+            <input type="color" id="color" name="color" value="#ff0000"><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Additional Information</legend>
+            <label for="bio">Biography:</label><br>
+            <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Tell us about yourself..."></textarea><br><br>
+            
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="" selected disabled>Select gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select><br><br>
+            
+            <label>Marital Status:</label><br>
+            <input type="radio" id="single" name="marital" value="single">
+            <label for="single">Single</label><br>
+            <input type="radio" id="married" name="marital" value="married">
+            <label for="married">Married</label><br>
+            <input type="radio" id="divorced" name="marital" value="divorced">
+            <label for="divorced">Divorced</label><br><br>
+            
+            <label>Interests:</label><br>
+            <input type="checkbox" id="sports" name="interests" value="sports">
+            <label for="sports">Sports</label><br>
+            <input type="checkbox" id="coding" name="interests" value="coding">
+            <label for="coding">coding</label><br>
+            <input type="checkbox" id="reading" name="interests" value="reading">
+            <label for="reading">Reading</label><br><br>
+        </fieldset>
+        
+        <input type="submit" value="Submit Personal Info">
+        <input type="reset" value="Reset Form">
+    </form>
+    
+    <hr>
+    
+    <!-- Form 2: Product Order -->
+    <form id="productOrder" name="productOrder" action="/action_page.php" method="post" enctype="multipart/form-data">
+        <h2>Product Order Form</h2>
+        <fieldset>
+            <legend>Product Selection</legend>
+            <label for="product">Choose a product:</label>
+            <select id="product" name="product" size="3" multiple>
+                <optgroup label="Electronics">
+                    <option value="laptop">Laptop</option>
+                    <option value="phone">Smartphone</option>
+                    <option value="tablet">Tablet</option>
+                </optgroup>
+                <optgroup label="Clothing">
+                    <option value="shirt">T-Shirt</option>
+                    <option value="pants">Pants</option>
+                </optgroup>
+            </select><br><br>
+            
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10" value="1"><br><br>
+            
+            <label for="size">Size:</label>
+            <input type="range" id="size" name="size" min="1" max="5" step="1" list="sizelist">
+            <datalist id="sizelist">
+                <option value="1" label="XS">
+                <option value="2" label="S">
+                <option value="3" label="M">
+                <option value="4" label="L">
+                <option value="5" label="XL">
+            </datalist><br><br>
+            
+            <label for="delivery">Delivery Date:</label>
+            <input type="datetime-local" id="delivery" name="delivery"><br><br>
+            
+            <label for="promo">Promo Code:</label>
+            <input type="text" id="promo" name="promo" pattern="[A-Z]{3}[0-9]{3}"><br><br>
+            
+            <label for="instructions">Special Instructions:</label><br>
+            <textarea id="instructions" name="instructions" rows="3" cols="50"></textarea><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Payment Information</legend>
+            <label for="card">Credit Card:</label>
+            <input type="text" id="card" name="card" pattern="[0-9]{16}" placeholder="1234123412341234"><br><br>
+            
+            <label for="expiry">Expiry Date:</label>
+            <input type="month" id="expiry" name="expiry"><br><br>
+            
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" pattern="[0-9]{3}" maxlength="3"><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Upload Files</legend>
+            <label for="prescription">Upload Prescription (if needed):</label>
+            <input type="file" id="prescription" name="prescription" accept=".pdf,.jpg,.png"><br><br>
+            
+            <label for="signature">Digital Signature:</label>
+            <input type="file" id="signature" name="signature" accept="image/*" capture="user"><br><br>
+        </fieldset>
+        
+        <button type="submit">Place Order</button>
+        <button type="reset">Clear Form</button>
+    </form>
+    
+    <hr>
+    
+    <!-- Form 3: Search and Advanced Options -->
+    <form id="searchForm" name="searchForm" action="/action_page.php" method="get">
+        <h2>Search Form</h2>
+        <label for="search">Search:</label>
+        <input type="search" id="search" name="q" placeholder="Enter search terms"><br><br>
+        
+        <label for="time">Search Time Range:</label>
+        <input type="time" id="time" name="time"><br><br>
+        
+        <label for="week">Select Week:</label>
+        <input type="week" id="week" name="week"><br><br>
+        
+        <label for="hiddenField">Hidden Field:</label>
+        <input type="hidden" id="hiddenField" name="hiddenField" value="secret123">
+        
+        <label for="output">Price Range:</label>
+        <input type="range" id="price" name="price" min="0" max="1000" step="50" oninput="output.value = price.value">
+        <output name="output" for="price">500</output><br><br>
+        
+        <label for="language">Preferred Language:</label>
+        <input list="languages" id="language" name="language">
+        <datalist id="languages">
+            <option value="Arabic">
+            <option value="English">
+            <option value="French">
+            <option value="German">
+            <option value="Chinese">
+        </datalist><br><br>
+        
+        <label for="feedback">Feedback:</label><br>
+        <textarea id="feedback" name="feedback" rows="3" cols="50" wrap="hard"></textarea><br><br>
+        
+        <input type="submit" width="150" height="50">
+        <input type="button" value="Click Me" onclick="alert('Button clicked!')">
+    </form>
+</body>
+</html>
